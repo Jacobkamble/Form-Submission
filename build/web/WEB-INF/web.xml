@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>
+            first
+        </servlet-name>
+        <servlet-class>com.RegisterServlet</servlet-class>
+        
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>first</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>
+            second
+        </servlet-name>
+        <servlet-class>com.SuccessServlet</servlet-class>
+        
+    </servlet>
+    
+     <servlet-mapping>
+        <servlet-name>second</servlet-name>
+        <url-pattern>/SuccessServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+      <servlet>
+        <servlet-name>sum</servlet-name>
+        <servlet-class>com.S1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>sum</servlet-name>  
+        <url-pattern>/S1</url-pattern>  
+    </servlet-mapping>
+    
+    
+    
+    <servlet>
+        <servlet-name>pro</servlet-name>
+        <servlet-class>com.S2</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>pro</servlet-name>  
+        <url-pattern>/S2</url-pattern>  
+    </servlet-mapping>
+    
+    
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
